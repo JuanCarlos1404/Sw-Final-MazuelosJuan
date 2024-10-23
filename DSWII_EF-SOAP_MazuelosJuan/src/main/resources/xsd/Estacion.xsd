@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/repsol"
+           xmlns:tns="http://example.com/repsol"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetEstacionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetEstacionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="estacion" type="tns:Estacion"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Estacion">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="ubicacion" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

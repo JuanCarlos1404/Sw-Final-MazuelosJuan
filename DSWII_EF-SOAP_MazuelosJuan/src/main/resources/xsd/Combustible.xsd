@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/repsol"
+           xmlns:tns="http://example.com/repsol"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetCombustibleRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetCombustibleResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="combustible" type="tns:Combustible"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Combustible">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="tipo" type="xs:string"/>
+            <xs:element name="precio" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
