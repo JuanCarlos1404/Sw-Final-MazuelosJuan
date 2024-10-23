@@ -1,0 +1,14 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.repsol.com/ws"
+    targetNamespace="http://www.repsol.com/ws">
+    <!-- Definiciones para EstacionesServicio, InventarioCombustibles y Proveedores -->
+
+    <wsdl:message name="GetEstacionServicioRequest">
+        <wsdl:part name="id" element="xsd:long"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetEstacionServicioResponse">
+        <wsdl:part name="EstacionServicio" element="tns:EstacionServicio"/>
+    </wsdl:message>
+
+    <!-- Repite para las demás entidades y operaciones CRUD -->
+</wsdl:definitions>
